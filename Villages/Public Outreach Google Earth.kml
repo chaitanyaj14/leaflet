@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document id="1XcnIV4JaVD6ruQ_wmUfGpchgOmQlgUw8">
+	<name>Public Outreach Google Earth</name>
+	<gx:CascadingStyle kml:id="__managed_style_16550E4FA511D1AEE47E">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.18.6/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2.66667</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_2F5001B09911D1AEE47E">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.18.6/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_0872C9EB4911D1AEE47E">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_16550E4FA511D1AEE47E</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2F5001B09911D1AEE47E</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_2BB35739F611D1AE3FE6">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_1244E9BEAB11D1AE3FE6">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2.66667</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_077E9D36C711D1AE3FE6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1244E9BEAB11D1AE3FE6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2BB35739F611D1AE3FE6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0FF944F0091102879E66">
+		<name>Shahpur</name>
+		<LookAt>
+			<longitude>76.22999919984787</longitude>
+			<latitude>21.24076314960192</latitude>
+			<altitude>243.6334667630516</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>5227.040020734421</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_077E9D36C711D1AE3FE6</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						76.22062037292628,21.24129710201027,247.046673763514 76.22156298923919,21.23450131091056,249.7619938299393 76.22448158901872,21.23183542967125,251.9218892764142 76.231456146062,21.23101422012677,253.8084438426862 76.23609548363521,21.23372073323309,246.7432072807819 76.23630519249379,21.24003439958423,245.8536442100659 76.24208331892324,21.24207351087552,248.9176151935136 76.24030938037906,21.24663524037584,250.5933124464972 76.23547149819122,21.24654345223187,245.9600710638397 76.22692141764102,21.24557654081871,241.0168526837859 76.22275219059075,21.25052992675887,244.2107128678701 76.21790436761185,21.24946005204764,244.6201807955536 76.22062037292628,21.24129710201027,247.046673763514 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="08C271AFAC110290B92E">
+		<name>Nagulkheda</name>
+		<LookAt>
+			<longitude>76.16282103208104</longitude>
+			<latitude>21.24937878947085</latitude>
+			<altitude>232.1002754164256</altitude>
+			<heading>2.954403420052099</heading>
+			<tilt>7.487263008658241</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>4185.929328929634</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0872C9EB4911D1AEE47E</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						76.15731678512277,21.24511718853874,231.91524677623 76.1619639353958,21.24882131105978,232.1237392911085 76.1679186716507,21.2535153014239,220.0753678108591 76.17401369722619,21.25720511261442,224.3127975133174 76.17123292414482,21.25965483401077,241.9124078769193 76.16844776437843,21.26440734157778,234.0704597591405 76.16470971885019,21.26103354544727,238.5903936207038 76.16207985437221,21.25884849796234,239.7194902150743 76.15796520609906,21.25552286634327,231.3901405923613 76.15730938944913,21.25529263976877,232.8553266852024 76.15817129271754,21.25391330045602,231.726215316244 76.15792213204264,21.25161262510181,229.7940524078011 76.15542335589487,21.24809382282051,235.2764663378641 76.15435406505419,21.24721212115533,234.7413795704689 76.15348512795735,21.24567468667289,232.1733293281252 76.15261254913284,21.24482318233808,228.6252097360273 76.15731678512277,21.24511718853874,231.91524677623 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="033D73E020110297F0B8">
+		<name>Ner</name>
+		<LookAt>
+			<longitude>76.18838947352144</longitude>
+			<latitude>21.24918425389907</latitude>
+			<altitude>245.5923098271169</altitude>
+			<heading>63.97066497684621</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>6667.757742729736</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_077E9D36C711D1AE3FE6</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						76.1762434340914,21.25861057340207,221.7776067848022 76.17677250446924,21.25114349983182,242.4113866945884 76.18122182658924,21.23460424954004,243.932571371254 76.1841974863332,21.23471487934874,242.8928990323865 76.18620967160361,21.23653005285589,243.9411291254703 76.187157159926,21.24503341476911,240.7806468304858 76.19277837703666,21.24773168571753,243.9455476142289 76.19432467315846,21.24802391003461,248.2359200392859 76.19529705862847,21.2498447152478,245.7949362774823 76.19621677112866,21.25274669136169,247.4597885359381 76.20136829963916,21.25910085381781,231.2205005653468 76.18890591316242,21.2649340590467,219.2003158143858 76.18560046724298,21.26526073466112,234.2468850877827 76.1762434340914,21.25861057340207,221.7776067848022 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

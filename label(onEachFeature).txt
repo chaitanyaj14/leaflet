@@ -1,0 +1,21 @@
+ markers.push(
+                    L.circleMarker(
+                        layer.getBounds().getCenter(),
+                        {
+                            radius: 0.0,
+                            opacity: 0,
+                            fillOpacity: 0
+                        }
+                    )
+                );
+
+                var markersCount = markers.length;
+                markers[markersCount - 1].bindTooltip(
+                    feature.properties.ndvi.toString(),
+                    {
+                        noHide: true,
+                        className: 'map-label',
+                        pane: 'mapPane'
+                    }
+                ).openTooltip();
+                markers[markersCount - 1].addTo(map);

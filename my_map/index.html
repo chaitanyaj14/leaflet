@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Map-Nagulkheda</title>
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css"/>
+    <link rel="stylesheet" href="lib/leaflet/leaflet.label.css"/>
+    <script src="lib/leaflet/leaflet-src.js"></script>
+    <script src="lib/leaflet/leaflet.label.js"></script>
+    <!-- <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+    <script src="lib/leaflet/Google.js"></script> -->
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+     integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+    <script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
+     -->
+    <script src="http://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <script src="lib/leaflet//leaflet-providers.js"></script>
+    
+    <script src="data/nagulkhedaGeoRef.geojson"></script>
+    <style type="text/css">
+        #map { height: 400px;}
+        .legend{ line-height: 1.5em}
+        .legend i{ width: 5em; float: left}
+    </style>
+</head>
+<body>
+    <h1>My Map</h1>
+    <div id = "map">
+        <script>
+            var nagulkheda;
+
+            function highlightFeature(e){
+                var layer = e.target;
+                layer.setStyle(
+                    {
+                        weight: 5,
+                        color: 'black',
+                        fillColor: 'white',
+                        fillOpacity: 0.2
+                    }
+                );
+                if(!L.Browser.ie && !L.Browser.opera){
+                    layer.bringToFront();
+                }
+            }
+
+            function resetHighlight(e){
+                nagulkheda.resetStyle(e.target);
+            }
+
+            function zoomToFeature(e){
+                map.fitBounds(e.target.getBounds());
+            }
+
+            var markers = new Array();
+            function nagulkhedaOnEachFeature(feature, layer){
+                layer.bindTooltip(feature.properties.name.toString()+"<br>NDVI: " + feature.properties.ndvi.toString(), {noHide: true}
+                
+                );
+
+                layer.on(
+                    {
+                        mouseover: highlightFeature,
+                        mouseout: resetHighlight,
+                        click: zoomToFeature
+                    }
+                );
+            }
+
+            function getVillageColor(ndvi){
+                if(ndvi > 0.2){
+                    return 'green';
+                }else if(ndvi <= 0.2 && ndvi > 0) {
+                    return 'brown';
+                }else {
+                    return 'blue';
+                }
+            }
+
+            function villageStyle(feature){
+                return{
+                    fillColor: getVillageColor(feature.properties.ndvi),
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: 3,
+                    fillOpacity: 0.7
+                }
+            }
+
+            var map = L.map('map').setView([21.25500, 76.16366],1);
+
+            //var googleLayer = new L.Google();
+            //map.addLayer(googleLayer);
+
+            //var googleRoadmapLayer = new L.Google('ROADMAP');
+            //map.addLayer(googleRoadmapLayer);
+
+            //var roads = L.gridLayer.googleMutant({
+            //    type: 'roadmap'	// valid values are 'roadmap', 'satellite', 'terrain' and 'hybrid'
+            //}).addTo(map);
+
+            var mapLayer = L.tileLayer.provider('Esri.WorldTopoMap').addTo(map);
+            
+
+            nagulkheda = L.geoJson(
+                    nagulkheda,
+                    {
+                        style: villageStyle,
+                        onEachFeature: nagulkhedaOnEachFeature
+                    }).addTo(map);
+            map.fitBounds(nagulkheda.getBounds());
+
+            var legend = L.control({position: 'bottomright'});
+            legend.onAdd = function(map){
+                var div = L.DomUtil.create('div','legend');
+                var labels = ['Water', "Soil/Bare Land", "Vegetation"];
+                var grades = [0, 0.20, 0.21];
+                div.innerHTML = '<div><b>Legend<b><div>';
+                for (var i = 0; i< grades.length; i++){
+                    div.innerHTML += '<i style = background:'
+                    + getVillageColor(grades[i]) + '>&nbsp;&nbsp;</i>&nbsp;&nbsp;' 
+                    + labels[i]+ '<br/>';
+                }
+                return div;
+            }
+            legend.addTo(map);
+
+            //Marker Point
+            //var point = [21.252847, 76.163310];
+            //For Marker
+            //var marker = L.marker(point).addTo(map);
+            //For Cicle Marker
+            //var circle = L.circle(point, 15,
+            //            {
+            //               color: 'puple',
+            //                fillColor: 'red',
+            //                fillOpacity: 0.8
+            //            }
+            //       ).addTo(map);
+            //Use Normal Marker
+            //marker.bindPopup("<b>Details: </b>Nil");
+
+            var imageUrl = 'data/nagulkheda.png';
+            var imageBounds = [
+                [21.26468, 76.15083],
+                [21.24418, 76.17396]
+            ];
+            var imageLayer = L.imageOverlay(imageUrl, imageBounds).addTo(map);
+            map.fitBounds(imageBounds);
+
+            var baseMaps = {"Base Layer ":mapLayer};
+            var overlayMaps = {"Indices": nagulkheda,
+                               "Satellite": imageLayer
+                              };
+            L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+       </script>
+    </div>
+</body>
+</html>
